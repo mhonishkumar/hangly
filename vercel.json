@@ -1,8 +1,0 @@
-{
-  "version": 2,
-  "routes": [
-    { "src": "/assets/(.*)", "dest": "/WebApp/assets/$1" },
-    { "src": "/renderer.js", "dest": "/WebApp/renderer.js" },
-    { "src": "/(.*)", "dest": "/WebApp/index.html" }
-  ]
-}
