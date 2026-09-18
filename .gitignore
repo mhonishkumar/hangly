@@ -1,43 +1,5 @@
-# macOS
-.DS_Store
-
-# Xcode
-build/
+node_modules/
 dist/
-DerivedData/
-*.moved-aside
-*.pbxuser
-!default.pbxuser
-*.mode1v3
-!default.mode1v3
-*.mode2v3
-!default.mode2v3
-*.perspectivev3
-!default.perspectivev3
-xcuserdata/
-*.xccheckout
-*.xcscmblueprint
-*.hmap
-*.ipa
-*.dSYM.zip
-*.dSYM
-
-# Xcode project — the generated project IS committed so a clean checkout builds
-# without XcodeGen. Per-user state inside it is not.
-Hangly.xcodeproj/project.xcworkspace/xcuserdata/
-Hangly.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
-Hangly.xcodeproj/xcuserdata/
-
-# Coverage and profiling artefacts
-*.profraw
-*.profdata
-.build/
-
-# Swift Package Manager
-.build/
-.swiftpm/
-Packages/
-
-# Fastlane / misc
-fastlane/report.xml
-fastlane/screenshots
+*.log
+.DS_Store
+Thumbs.db
