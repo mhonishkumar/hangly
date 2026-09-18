@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <!-- transparent background -->
+
+  <!-- Rope cord -->
+  <line x1="128" y1="0" x2="128" y2="82" stroke="#7a6a5a" stroke-width="5.5" stroke-linecap="round"/>
+
+  <!-- Beads on cord -->
+  <circle cx="128" cy="22" r="7">
+    <radialGradient id="bg1" cx="40%" cy="35%">
+      <stop offset="0%" stop-color="#e8c88a"/>
+      <stop offset="100%" stop-color="#a07840"/>
+    </radialGradient>
+    <animate attributeName="opacity" values="1" dur="1s" fill="freeze"/>
+  </circle>
+  <circle cx="128" cy="22" r="7" fill="url(#bg1)"/>
+  <circle cx="128" cy="44" r="7" fill="url(#bg1)"/>
+  <circle cx="128" cy="66" r="7" fill="url(#bg1)"/>
+
+  <!-- Bead gradients -->
+  <defs>
+    <radialGradient id="beadGrad" cx="35%" cy="30%" r="65%">
+      <stop offset="0%"   stop-color="#eed49e"/>
+      <stop offset="100%" stop-color="#8a6030"/>
+    </radialGradient>
+    <radialGradient id="eyeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#4aa0f0" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#1b3f7a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-10%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="7" stdDeviation="9" flood-color="rgba(0,0,0,0.32)"/>
+    </filter>
+  </defs>
+
+  <!-- Beads (proper gradient) -->
+  <circle cx="128" cy="22" r="7"  fill="url(#beadGrad)"/>
+  <circle cx="128" cy="44" r="7"  fill="url(#beadGrad)"/>
+  <circle cx="128" cy="66" r="7"  fill="url(#beadGrad)"/>
+
+  <!-- Charm: Nazar / evil-eye amulet -->
+  <g filter="url(#shadow)">
+    <!-- Outer dark blue ring -->
+    <circle cx="128" cy="162" r="72" fill="#1b3f7a"/>
+    <!-- White ring -->
+    <circle cx="128" cy="162" r="52" fill="#eef0f8"/>
+    <!-- Bright blue iris -->
+    <circle cx="128" cy="162" r="35" fill="#3a8cdc"/>
+    <!-- Pupil -->
+    <circle cx="128" cy="162" r="16" fill="#0d0d18"/>
+    <!-- Glow overlay -->
+    <circle cx="128" cy="162" r="72" fill="url(#eyeGlow)"/>
+    <!-- Highlight -->
+    <circle cx="116" cy="149" r="9"  fill="rgba(255,255,255,0.72)"/>
+    <circle cx="140" cy="174" r="4"  fill="rgba(255,255,255,0.30)"/>
+  </g>
+</svg>
