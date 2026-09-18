@@ -1,7 +1,8 @@
 {
   "version": 2,
-  "buildCommand": null,
-  "outputDirectory": "WebApp",
-  "installCommand": null,
-  "framework": null
+  "routes": [
+    { "src": "/assets/(.*)", "dest": "/WebApp/assets/$1" },
+    { "src": "/renderer.js", "dest": "/WebApp/renderer.js" },
+    { "src": "/(.*)", "dest": "/WebApp/index.html" }
+  ]
 }
