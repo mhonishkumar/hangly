@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Hangly",
+  "version": "1.0.0",
+  "description": "A tiny hanging charm that follows you across every browser tab.",
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Hangly"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/charms/*.svg", "assets/charms/*.png"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "permissions": ["storage"]
+}

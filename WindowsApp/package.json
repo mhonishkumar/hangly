@@ -1,0 +1,66 @@
+{
+  "name": "hangly-windows",
+  "version": "1.0.0",
+  "description": "A tiny piece of motion for your desktop — Windows Edition",
+  "main": "main.js",
+  "author": "sharancreatedthis",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "dist:win": "electron-builder --win --x64"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.sharancreatedthis.hangly",
+    "productName": "Hangly",
+    "copyright": "© 2026 sharancreatedthis",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "renderer.js",
+      "index.html",
+      "assets/**/*"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "assets/icon.png",
+      "requestedExecutionLevel": "asInvoker"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": false,
+      "deleteAppDataOnUninstall": true,
+      "createDesktopShortcut": false,
+      "createStartMenuShortcut": true,
+      "menuCategory": "Hangly",
+      "runAfterFinish": true
+    },
+    "extraMetadata": {
+      "main": "main.js"
+    }
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^1.0.9"
+  }
+}
