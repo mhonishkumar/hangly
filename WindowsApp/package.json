@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A tiny piece of motion for your desktop — Windows Edition",
   "main": "main.js",
-  "author": "sharancreatedthis",
+  "author": "mhonishkumar",
   "license": "MIT",
   "scripts": {
     "start": "electron .",
@@ -16,9 +16,9 @@
     "electron-builder": "^24.13.3"
   },
   "build": {
-    "appId": "com.sharancreatedthis.hangly",
+    "appId": "com.mhonishkumar.hangly",
     "productName": "Hangly",
-    "copyright": "© 2026 sharancreatedthis",
+    "copyright": "© 2026 mhonishkumar",
     "directories": {
       "output": "dist"
     },
