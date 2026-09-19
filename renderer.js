@@ -5,8 +5,14 @@ const ctx    = canvas.getContext('2d');
 let W, H;
 
 function resize() {
-  W = canvas.width  = window.innerWidth;
-  H = canvas.height = window.innerHeight;
+  const dpr = window.devicePixelRatio || 1;
+  W = window.innerWidth;
+  H = window.innerHeight;
+  canvas.width  = W * dpr;
+  canvas.height = H * dpr;
+  canvas.style.width  = `${W}px`;
+  canvas.style.height = `${H}px`;
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   if (!sim.anchorDragging) { sim.anchor.x = W / 2; }
 }
 window.addEventListener('resize', () => { resize(); wake(); });

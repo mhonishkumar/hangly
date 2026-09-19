@@ -8,8 +8,14 @@ const ctx    = canvas.getContext('2d');
 
 let width, height;
 function resizeCanvas() {
-  width  = canvas.width  = window.innerWidth;
-  height = canvas.height = window.innerHeight;
+  const dpr = window.devicePixelRatio || 1;
+  width  = window.innerWidth;
+  height = window.innerHeight;
+  canvas.width  = width * dpr;
+  canvas.height = height * dpr;
+  canvas.style.width  = `${width}px`;
+  canvas.style.height = `${height}px`;
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   sim.anchor.x = width / 2;
   sim.anchor.y = 12;
 }
